@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: eimp-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eimp
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  sql:
+    init:
+      mode: never
+
+server:
+  port: 8081
