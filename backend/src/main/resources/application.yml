@@ -3,9 +3,9 @@ spring:
     name: eimp-backend
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/eimp
-    username: postgres
-    password: postgres
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/eimp}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -23,4 +23,12 @@ spring:
       mode: never
 
 server:
-  port: 8081
+  port: ${SERVER_PORT:8081}
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}

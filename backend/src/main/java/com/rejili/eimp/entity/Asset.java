@@ -1,47 +1,43 @@
 package com.rejili.eimp.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "users")
+@Table(name = "assets")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class User {
+public class Asset {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String firstName;
-
-    @Column(nullable = false)
-    private String lastName;
-
     @Column(nullable = false, unique = true)
-    private String username;
-
-    @Column(nullable = false, unique = true)
-    private String email;
-
-    @JsonIgnore
-    @Column(nullable = false)
-    private String password;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Role role;
+    private String assetTag;
 
     @Column(nullable = false)
-    @Builder.Default
-    private Boolean enabled = true;
+    private String name;
+
+    @Column(nullable = false)
+    private String type;
+
+    private String manufacturer;
+
+    private String model;
+
+    private String serialNumber;
+
+    private String status;
+
+    private String location;
+
+    private String description;
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;

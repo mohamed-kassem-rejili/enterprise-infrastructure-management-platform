@@ -29,3 +29,9 @@ node_modules/
 
 # Build
 dist/
+# Spring local configuration
+application-local.yml
+application-local.yaml
+
+# Spring local configuration
+application-local.yml

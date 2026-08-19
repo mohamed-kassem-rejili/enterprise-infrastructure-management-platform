@@ -1,0 +1,29 @@
+package com.rejili.eimp.entity;
+
+public enum AuditAction {
+
+    LOGIN,
+    LOGOUT,
+
+    CREATE_ASSET,
+    UPDATE_ASSET,
+    DELETE_ASSET,
+
+    CREATE_VM,
+    UPDATE_VM,
+    DELETE_VM,
+    START_VM,
+    STOP_VM,
+    PAUSE_VM,
+    REBOOT_VM,
+
+    CREATE_ALERT,
+    RESOLVE_ALERT,
+
+    CREATE_INCIDENT,
+    ASSIGN_INCIDENT,
+    UPDATE_INCIDENT_STATUS,
+    RESOLVE_INCIDENT,
+    CLOSE_INCIDENT,
+    DELETE_INCIDENT
+}
